@@ -71,3 +71,27 @@
     });
 
 })();
+
+/*
+  {
+    "title": "Exceções",
+    "description": "Exceções sendo lançadas nas páginas:",
+    "action": "Ao clicar em X na página Y:",
+    "evidence": "--- Evidência ---<br><br><strong>HTTP Método:</strong><br><br><strong>URI:</strong><br><br><strong>Página de Origem:</strong><br><br><strong>Classe da Exceção:</strong><br><br><strong>Mensagem da Exceção:</strong><br><br>",
+    "proposal": "- Avaliar o tratamento de erro do método para melhorar a experiência com o usuário final."
+  },
+  {
+    "title": "SELECT N+1",
+    "description": "Mesma instrução de banco sendo executada diversas vezes por requisição:",
+    "action": "Ao clicar em X na página Y:",
+    "evidence": "--- Evidência ---<br><br><strong>HTTP Método:</strong><br><br><strong>URI:</strong><br><br><strong>Página de Origem:</strong><br><br><strong>Classe:</strong><br><br><strong>Método:</strong><br><br><strong>Instrução SQL:</strong><br><br>",
+    "proposal": "- Revisar Mapeamento ORM.<br><br>- Analisar a possibilidade de grupar os argumentos passados para a instrução para utilizar o operador IN() e dessa forma executar a instrução uma única vez.<br><br>- Analisar a possibilidade de modificar as configurações do framework de ORM."
+  },
+  {
+    "title": "Melhoria de Performance",
+    "description": "Melhoria de Performance na página:",
+    "action": "Ao clicar em X na página Y:",
+    "evidence": "--- Evidência ---<br><br><strong>HTTP Método:</strong><br><br><strong>URI:</strong><br><br><strong>Página de Origem:</strong><br><br><strong>Classe:</strong><br><br><strong>Método:</strong><br><br><strong>Instrução SQL:</strong><br><br>",
+    "proposal": "- Analisar a possibilidade de melhorar a performance da instrução.<br><br>- Analisar o plano de execução das consultas para verificar o melhor uso dos índices.<br><br>- Verificar se as estatísticas dos índices estão atualizadas."
+  },
+  */
