@@ -3,7 +3,7 @@
 // @namespace    http://sda.saude.gov.br/albatross-admin
 // @version      3.0
 // @description  Enhanced occurrence support
-// @author       dilas
+// @author       dilas,zac
 // @match        http://sda.saude.gov.br/albatross-admin/occurrences/new*
 // @grant        none
 // ==/UserScript==
@@ -20,6 +20,31 @@
 
     $('div.row:eq( 2 )').after('<div class="row"><div class="control-group col-xs-12 col-sm-6 col-md-8 col-lg-4"><label class="control-label" for="occurrence_type">Tipo de Ocorrência:</label><div class="controls"><select class="form-control" name="occurrence_type" id="occurrence_type"><option></option></select></div></div></div><br>');
 	
+	
+	required = $.parseJSON(
+					$.ajax(
+						{
+						   url: "https://rawgit.com/isaacpessoa/albatross-admin-helper/master/required.json", 
+						   async: false, 
+						   dataType: 'json'
+						}
+					).responseText
+				);
+			
+	metadata = $.parseJSON(
+				$.ajax(
+					{
+					   url: "https://rawgit.com/isaacpessoa/albatross-admin-helper/master/meta.json", 
+					   async: false, 
+					   dataType: 'json'
+					}
+				).responseText
+			);
+	$.each(metadata, function(index, obj) {
+            $('#occurrence_type').append(new Option(obj.title, index));
+        });
+	
+	/*
 	 $.getJSON("https://rawgit.com/isaacpessoa/albatross-admin-helper/master/required.json", function(data) {
         required = data;
     });
@@ -31,7 +56,7 @@
             $('#occurrence_type').append(new Option(obj.title, index));
         });
     });
-
+	*/
     $('#occurrence_type').on('change', function (evt) {
         var optionSelected = $('option:selected', this);
         var valueSelected = this.value;
