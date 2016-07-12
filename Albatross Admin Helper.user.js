@@ -71,7 +71,7 @@
     });
 
 })();
-<<<<<<< HEAD
+
 
 /*
   {
@@ -96,5 +96,4 @@
     "proposal": "- Analisar a possibilidade de melhorar a performance da instrução.<br><br>- Analisar o plano de execução das consultas para verificar o melhor uso dos índices.<br><br>- Verificar se as estatísticas dos índices estão atualizadas."
   },
   */
-=======
->>>>>>> 3e92018f3ac6c6cec06bdb4f94b331512e2ac60a
+
