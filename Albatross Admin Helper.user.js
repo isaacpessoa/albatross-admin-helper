@@ -12,7 +12,7 @@
     'use strict';
 
     var metadata = [];
-	var required = null;
+	var required = [];
     var descriptionField = $('trix-editor[input="occurrence_description_trix_input_occurrence"]')[0];
     var actionField = $('trix-editor[input="occurrence_actions_attributes_0_action_trix_input_action"]')[0];
     var evidenceField = $('trix-editor[input="occurrence_actions_attributes_0_evidence_trix_input_action"]')[0];
