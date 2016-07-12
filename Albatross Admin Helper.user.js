@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Albatross Admin Helper
-// @namespace    http://<albatross address>/albatross-admin
-// @version      2.0
+// @namespace    http://sda.saude.gov.br/albatross-admin
+// @version      3.0
 // @description  Enhanced occurrence support
 // @author       dilas
-// @match        http://<albatross address>/albatross-admin/occurrences/new*
+// @match        http://sda.saude.gov.br/albatross-admin/occurrences/new*
 // @grant        none
 // ==/UserScript==
 
