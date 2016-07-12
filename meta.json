@@ -24,8 +24,18 @@
 	"title": "Tempo de Operação - Código - Método com baixa performance",
     "description": "Exceções sendo lançadas nas páginas:",
     "action": "Ao clicar em X na página Y:",
-    "evidence": "--- Evidência ---<br><br><strong>HTTP Método:</strong><br><br><strong>URI:</strong><br><br><strong>Página de Origem:</strong><br><br><strong>Classe da Exceção:</strong><br><br><strong>Mensagem da Exceção:</strong><br><br>",
-    "proposal": "- Avaliar o tratamento de erro do método para melhorar a experiência com o usuário final."
+    "evidence": "--- Evidência ---<br>
+	<br><strong>HTTP Método:</strong><br>
+	<br><strong>URI:</strong><br>
+	<br><strong>Página de Origem:</strong><br>
+	<br><strong>Classe da Exceção:</strong><br>
+	<br><strong>Trecho de Sequência dos Métodos:</strong><br>
+	<br><strong>Método:</strong><br>
+	<br><strong>Tempo de contribuição:</strong><br>
+	
+	<br><strong>Segue imagem para auxiliar no entendimento.</strong><br>
+	<br>",
+    "proposal": "- Verificar a possibilidade de otimizar o método."
 	
 	}
 ]
