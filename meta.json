@@ -22,11 +22,12 @@
   },
   {
 	"title": "Tempo de Operação - Código - Método com baixa performance",
-    "description": "Método com baixa performance.<br> <br><strong>URI:</strong><br>",
+    "description": "Método com baixa performance.<br> <br><strong>URI:</strong><br><br>",
     "action": "Ao clicar em X na página Y:",
-    "evidence": "--- Método com elevado tempo de processamento. ---<br> <br><strong>HTTP Método:</strong><br> <br><strong>URI:</strong><br> <br><strong>Página de Origem:</strong><br> <br><strong>Classe da Exceção:</strong><br> <br><strong>Trecho de Sequência dos Métodos:</strong><br> <br><strong>Método:</strong><br> <br><strong>Tempo de contribuição:</strong><br> <br><strong>Segue imagem para auxiliar no entendimento.</strong><br> <br>",
+    "evidence": "Método com elevado tempo de processamento.<br> <br><strong>Método HTTP:</strong><br> <br><br><strong>URI:</strong><br> <br><br><strong>Página de Origem:</strong><br> <br><br><strong>Data Hora Ocorrência:</strong><br> <br><br><strong>Trecho de Sequência dos Métodos:</strong><br>Método Classe API<br> <br><br><strong>Método:</strong><br> <br><br><strong>Classe:</strong><br> <br><br><strong>Tempo de contribuição:</strong><br> <br><br><strong>Segue imagem para auxiliar no entendimento.</strong<br>",
     "proposal": "- Verificar a possibilidade de otimizar o método."
 	
 	}
 ]
+
 
