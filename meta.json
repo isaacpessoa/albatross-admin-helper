@@ -1,9 +1,9 @@
 [
   {
 	"title": "Método com baixa performance",
-	"category":"Tempo de Operação - Código - Método com baixa performance",
-    "description": "Método com baixa performance.<br>",
-    "tEvidence": "<br>Método com elevado tempo de processamento.<br>",
+	"category":<br>"Tempo de Operação - Código - Método com baixa performance<br>",
+    "description": "Método com baixa performance.<br><br>",
+    "tEvidence": "Método com elevado tempo de processamento.<br>",
 	"evidence": "<br><br><strong>Trecho de Sequência dos Métodos:</strong><br>Método Classe API<br> <br><br><strong>Segue imagem para auxiliar no entendimento.</strong><br>",
     "proposal": "- Verificar a possibilidade de otimizar o método."
 	}
