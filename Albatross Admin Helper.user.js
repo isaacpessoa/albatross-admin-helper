@@ -60,17 +60,53 @@
     $('#occurrence_type').on('change', function (evt) {
         var optionSelected = $('option:selected', this);
         var valueSelected = this.value;
-
+		
+		//descricao inicial da evidencia
         descriptionField.editor.insertHTML(metadata[valueSelected].description);
+		//label do(s) complemento(s) obrigatorio da descricao da evidencia
 		descriptionField.editor.insertHTML(required.description);
+		//texto obrigatorio da acao
         actionField.editor.insertHTML(required.action);
+		//titulo da evidencia
 		evidenceField.editor.insertHTML(metadata[valueSelected].tEvidence);
+		//label da categoria
+		evidenceField.editor.insertHTML(required.tCategory);
+		//categoria escolhida
+		evidenceField.editor.insertHTML(metadata[valueSelected].category);
+		//campos obrigatorios da evidencia
 		evidenceField.editor.insertHTML(required.evidence);
+		//campos especificos da evidencia
         evidenceField.editor.insertHTML(metadata[valueSelected].evidence);
+		//proposta de medida da categoria escolhida
         proposalField.editor.insertHTML(metadata[valueSelected].proposal);
     });
 
 })();
+
+var wizard = {
+    carregarCss: function(){
+        $.ajax({
+            url:"http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css",
+            success:function(data){
+                 $("<style></style>").appendTo("head").html(data);
+            }
+        });   
+    }
+};
+
+var albatross = {
+    occurrences: {
+		new:function(){
+			console.log("nova ocorrencia"); 
+		},
+		edit:function(){
+			console.log("editar ocorrencia"); 
+		}	
+	}
+};
+
+
+
 
 
 /*
