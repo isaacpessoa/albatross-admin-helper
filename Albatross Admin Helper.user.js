@@ -74,11 +74,27 @@
 		//categoria escolhida
 		evidenceField.editor.insertHTML(metadata[valueSelected].category);
 		//campos obrigatorios da evidencia
-		evidenceField.editor.insertHTML(required.evidence);
+		//evidenceField.editor.insertHTML(required.evidence);
+		$.each(required.evidence, function(a, b) {
+			evidenceField.editor.insertHTML(b);
+			console.log(a);
+			console.log(b);
+		});
+		
 		//campos especificos da evidencia
-        evidenceField.editor.insertHTML(metadata[valueSelected].evidence);
+        //evidenceField.editor.insertHTML(metadata[valueSelected].evidence);
+		$.each(metadata[valueSelected].evidence, function(a, b) {
+			evidenceField.editor.insertHTML(b);
+			console.log(a);
+			console.log(b);
+		});
 		//proposta de medida da categoria escolhida
-        proposalField.editor.insertHTML(metadata[valueSelected].proposal);
+        //proposalField.editor.insertHTML(metadata[valueSelected].proposal);
+		$.each(metadata[valueSelected].proposal, function(a, b) {
+			proposalField.editor.insertHTML(b);
+			console.log(a);
+			console.log(b);
+		});
     });
 
 })();
@@ -104,6 +120,10 @@ var albatross = {
 		}	
 	}
 };
+
+
+
+
 
 
 
