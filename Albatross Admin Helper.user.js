@@ -18,7 +18,7 @@
     var evidenceField = $('trix-editor[input="occurrence_actions_attributes_0_evidence_trix_input_action"]')[0];
     var proposalField = $('trix-editor[input="occurrence_actions_attributes_0_proposal_trix_input_action"]')[0];
 
-    $('div.row:eq( 2 )').after('<div class="row"><div class="control-group col-xs-12 col-sm-6 col-md-8 col-lg-4"><label class="control-label" for="occurrence_type">Tipo de Ocorrência:</label><div class="controls"><select class="form-control" name="occurrence_type" id="occurrence_type"><option></option></select></div></div></div><br>');
+    $('div.row:first').after('<div class="row"><div class="control-group col-xs-12 col-sm-6 col-md-8 col-lg-4"><label class="control-label" for="occurrence_type">Tipo de Ocorrência:</label><div class="controls"><select class="form-control" name="occurrence_type" id="occurrence_type"><option></option></select></div></div></div><br>');
 	
 	
 	required = $.parseJSON(
@@ -61,40 +61,48 @@
         var optionSelected = $('option:selected', this);
         var valueSelected = this.value;
 		
-		//descricao inicial da evidencia
+		//descricao inicial da evidencia ***************************************
         descriptionField.editor.insertHTML(metadata[valueSelected].description);
 		//label do(s) complemento(s) obrigatorio da descricao da evidencia
 		descriptionField.editor.insertHTML(required.description);
-		//texto obrigatorio da acao
+		//**********************************************************************
+		
+		
+		//texto obrigatorio da acao ********************************************
         actionField.editor.insertHTML(required.action);
-		//titulo da evidencia
+		//**********************************************************************
+		
+		
+		//titulo da evidencia **************************************************
 		evidenceField.editor.insertHTML(metadata[valueSelected].tEvidence);
 		//label da categoria
 		evidenceField.editor.insertHTML(required.tCategory);
-		//categoria escolhida
+		//**********************************************************************
+
+		
+		//categoria escolhida***************************************************
 		evidenceField.editor.insertHTML(metadata[valueSelected].category);
 		//campos obrigatorios da evidencia
 		//evidenceField.editor.insertHTML(required.evidence);
 		$.each(required.evidence, function(a, b) {
 			evidenceField.editor.insertHTML(b);
-			console.log(a);
-			console.log(b);
 		});
-		
 		//campos especificos da evidencia
         //evidenceField.editor.insertHTML(metadata[valueSelected].evidence);
 		$.each(metadata[valueSelected].evidence, function(a, b) {
 			evidenceField.editor.insertHTML(b);
-			console.log(a);
-			console.log(b);
 		});
-		//proposta de medida da categoria escolhida
+		//**********************************************************************
+		
+		
+		//proposta de medida da categoria escolhida*****************************
         //proposalField.editor.insertHTML(metadata[valueSelected].proposal);
 		$.each(metadata[valueSelected].proposal, function(a, b) {
 			proposalField.editor.insertHTML(b);
-			console.log(a);
-			console.log(b);
 		});
+		//**********************************************************************
+
+		
     });
 
 })();
